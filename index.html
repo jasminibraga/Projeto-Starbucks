@@ -5,44 +5,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;900&display=swap" rel="stylesheet">
-    <title>Starbucks</title>
+    <title>Starbucks Coffee Company - Home</title>
 </head>
 
 <body>
     <div class="circulo"></div>
 
-    <img src="./images/logo.png" class="logo">
+    <img class="logo" src="./img/logo.png">
 
     <div class="conteudo">
-
         <div class="caixa-texto">
-            <h2>It's not just Coffee <br>
+            <h2>It's not just Coffee<br>
                 It's <span>Starbucks</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eum corrupti odit aperiam illum odio
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis eum corrupti odit aperiam illum odio
                 voluptatum ea nisi iure vero. Neque tempore sequi nisi, enim vel omnis cumque delectus odit.</p>
-            <button>Deixe o seu Like!</button>
+            <button>Learn More</button>
         </div>
 
         <div class="caixa-imagem">
-            <img src="./images/img1.png" class="starbucks">
+            <img class="starbucks" src="./img/img1.png">
         </div>
 
     </div>
 
     <div class="menu">
-        <img src="./images/thumb1.png" class="botao-menu"
-            onclick="trocaImagem('./images/img1.png'); trocaCor('#017143')">
-        <img src="./images/thumb2.png" class="botao-menu"
-            onclick="trocaImagem('./images/img2.png'); trocaCor('#eb7495')">
-        <img src="./images/thumb3.png" class="botao-menu"
-            onclick="trocaImagem('./images/img3.png'); trocaCor('#d752b1')">
+        <img class="botao-menu" src="./img/thumb1.png" onclick="trocaImagem('./img/img1.png'); trocaCor('#017143')">
+        <img class="botao-menu" src="./img/thumb2.png" onclick="trocaImagem('./img/img2.png'); trocaCor('#EB7495')"> 
+        <img class="botao-menu" src="./img/thumb3.png" onclick="trocaImagem('./img/img3.png'); trocaCor('#D752B1')">
+        <!-- quando eu clico na minha imagem, chamo a função trocaImagem e envio o endereço novo -->
     </div>
 
 </body>
-<script src="./scripts.js"></script>
+<script>
+    let imagem = document.querySelector(".starbucks") 
+    let circulo = document.querySelector(".circulo")
+        
+    function trocaImagem(endereco){
+       imagem.src = endereco
+    }
+
+    function trocaCor(cor) {
+        circulo.style.background = cor
+    }
+
+</script>
 
 </html>
